@@ -1,0 +1,49 @@
+
+"""
+# 用已知Matrix 去測試看找到的L and U 是否正確
+    test = [[1, 2, 4], [3, 8, 14], [2, 6, 13]]
+    test = Matrix(dims = (3, 3), fill = test)
+    n = 3
+    # Find the L U for the decomposition
+    L = Matrix(dims = (n, n), fill = 0)
+    U = Matrix(dims = (n, n), fill = 0)
+    
+    # Fill the value of L
+    for i in range(n):
+        L[i, i] = 1
+    
+    print(L)
+    print(U)
+    result = test
+    
+    # Calculate for the lower, upper matrix, i for row index, j for col index
+    for i in range(n):
+        for j in range(n):
+            #text = str(i) + ", " + str(j) + " : "
+            tmp = result[i, j]
+            # text += str(tmp)
+            for k in range(n):
+                if j != k:
+                    tmp = tmp -  L[i, k] * U[k, j]
+                    # text += ' - ' + str(L[i, k] * U[k, j])
+                # text += '=' + str(tmp)
+            # left     
+            if i > j :
+                if U[j , i] != 0:
+                    L[i, j] = tmp / U[j, j]
+                else :
+                    L[i, j] = tmp
+                # text += ' / ' + str(U[j, i]) + ' = ' + str(L[i, j])
+            else:
+                if L[j, i] != 0:
+                    U[i, j] = tmp / L[j, j]  
+                else:
+                    U[i, j] = tmp
+            #print(text)
+            
+    print("Left Matrix : ")
+    print(L)
+    print("Right Matrix : ")
+    print(U)
+    print(L @ U)
+"""
