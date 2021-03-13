@@ -18,9 +18,11 @@ Output:
 n = 2, lambda = 0
 ![image](https://github.com/ginagigo123/Regularized-Linear-Regression-From-Scratch/blob/main/result/1.LSE.jpg)
 ![image](https://github.com/ginagigo123/Regularized-Linear-Regression-From-Scratch/blob/main/result/1.Newton.jpg)
+
 n = 3, lambda = 0
 ![image](https://github.com/ginagigo123/Regularized-Linear-Regression-From-Scratch/blob/main/result/2.LSE.jpg)
 ![image](https://github.com/ginagigo123/Regularized-Linear-Regression-From-Scratch/blob/main/result/2.Newton.jpg)
+
 n = 3, lambda = 10000
 ![image](https://github.com/ginagigo123/Regularized-Linear-Regression-From-Scratch/blob/main/result/3.LSE.jpg)
 ![image](https://github.com/ginagigo123/Regularized-Linear-Regression-From-Scratch/blob/main/result/3.Newton.jpg)
