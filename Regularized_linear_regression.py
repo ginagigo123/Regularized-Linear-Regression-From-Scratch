@@ -4,6 +4,9 @@ Created on Mon Mar  8 22:16:37 2021
 
 @author: GINATSAI
 content: 
+    Regularized linear model regression (polynomial basis) & visualization
+    1. LSE : use LU decomposition to find the inverse of A.T() @ A + lamda * I
+    2. Newton's method
 """
 from Matrix import Matrix
 import matplotlib.pyplot as plt

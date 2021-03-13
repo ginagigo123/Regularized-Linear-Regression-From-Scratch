@@ -3,6 +3,8 @@
 Created on Tue Mar  9 20:41:43 2021
 
 @author: GINATSAI
+content: Instead of using Numpy, build Matrix module From scratch.
+         +, -, *, @, Transpose
 """
 
 class Matrix:
@@ -45,10 +47,11 @@ class Matrix:
         
         return C
     
-    # right-hand-side 
+    # right-hand-side
     def __radd__(self, other):
         return self.__add__(other)
     
+    # A - B or A - 2
     def __sub__(self, other):
         # new Matrix
         C = Matrix(dims = (self.row, self.col), fill = 0)
@@ -65,7 +68,7 @@ class Matrix:
         
         return C
     
-    # A * 2 or A *b matrix-matrix pointwise multiplication
+    # A * 2 or A * b matrix-matrix pointwise multiplication
     def __mul__(self, other):
         C = Matrix(dims = (self.row, self.col), fill = 1)
         
@@ -109,11 +112,13 @@ class Matrix:
                 C.A[j][i] = self.A[i][j]
         return C
     
+    # get the value of Matrix[i, j]
     def __getitem__(self, key):
         if isinstance(key, tuple):
             i, j = key[0], key[1]
             return self.A[i][j]
     
+    # set the value of Matrix[i, j]
     def __setitem__(self, key, value):
         if isinstance(key, tuple):
             i, j = key[0], key[1]
